@@ -1,0 +1,12 @@
+diff -urN tensorflow/tensorflow/core/platform/cpu_feature_guard.cc tensorflow-original/tensorflow/core/platform/cpu_feature_guard.cc
+--- tensorflow/tensorflow/core/platform/cpu_feature_guard.cc	2024-11-24 15:41:53.700431815 +0000
++++ tensorflow-original/tensorflow/core/platform/cpu_feature_guard.cc	2024-11-24 15:39:38.635265727 +0000
+@@ -207,7 +207,7 @@
+     CheckIfFeatureUnused(CPUFeature::FMA, "FMA", missing_instructions);
+ #endif  // __FMA__
+     if (!missing_instructions.empty()) {
+-      LOG(INFO) << "Hello 5204 This TensorFlow binary is optimized "
++      LOG(INFO) << "This TensorFlow binary is optimized "
+                 << "to use available CPU instructions in performance-"
+                 << "critical operations." << std::endl
+                 << "To enable the following instructions:"
